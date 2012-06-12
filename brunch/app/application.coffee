@@ -27,7 +27,7 @@ class window.BubbleView extends Backbone.View
     $('#newsfeed').show("slide", { direction: 'right' }, 1000)
 
   left_staff:(e)->
-    ($ @el).hide("slide", { direction: 'left' }, 1)
+    ($ @el).hide("slide", { direction: 'right' }, 1)
     $('#newsfeed').show("slide", { direction: 'left' }, 1000)
 
 

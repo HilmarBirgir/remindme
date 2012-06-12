@@ -156,7 +156,7 @@
 
     BubbleView.prototype.left_staff = function(e) {
       ($(this.el)).hide("slide", {
-        direction: 'left'
+        direction: 'right'
       }, 1);
       return $('#newsfeed').show("slide", {
         direction: 'left'
