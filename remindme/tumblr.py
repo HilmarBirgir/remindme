@@ -1,13 +1,12 @@
 # encoding=utf-8
 
 import os, json
-from restkit import request
-
+import requests
 
 def tumblr(username,count,api_key):
-    url = 'http://api.tumblr.com/v2/blog/'+username+'.tumblr.com/posts/json?filter=text&limit='+str(count)+'&api_key='+api_key
-    r = request(url)
-    s = json.loads(r.body_string())['response']['posts']
+    url = 'http://api.tumblr.com/v2/blog/'+username+'.tumblr.com/posts/json?limit='+str(count)+'&api_key='+api_key
+    r = requests.get(url)
+    s = json.loads(r.text)['response']['posts']
     blogs = []
     tumblr_dates = []
     titles = []

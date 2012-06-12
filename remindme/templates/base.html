@@ -51,7 +51,7 @@
           {% for i in range(1) %}
             <h2>{{titles[i]}}</h2>
             <h3>{{tumblr_dates[i]}}</h3>
-            <p>{{blogs[i]}}</p>
+            <p>{{blogs[i] | safe}}</p>
           {% endfor %}
           <img class="left" src="{{ url_for('.static', filename="images/left.png") }}">
           <img class="right" src="{{ url_for('.static', filename="images/right.png") }}">
@@ -67,8 +67,10 @@
       <div class="twelve columns footer">
         <div class="six columns alpha" id="twitter">
           {% for i in range(1) %}
-            <p>{{tweets[i]}}</p>
-            <p>{{twitter_dates[i]}}</p>
+            <img src="{{ url_for('.static', filename="images/twitter.jpg") }}">
+            <p>{{tweets[i]}} </p>
+            <br>
+            <p class="date">{{twitter_dates[i]}}</p>
           {% endfor %}
         </div>
         <div class="six columns omega" id="facebook">

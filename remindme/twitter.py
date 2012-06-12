@@ -1,14 +1,14 @@
 # encoding=utf-8
 
 import os, json
-from restkit import request
+import requests
 
 def twitter(username,count):
     url = 'https://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name='+username+'&count='+str(count)
     tweets = []
     twitter_dates = []
-    r = request(url)
-    k = json.loads(r.body_string())
+    r = requests.get(url)
+    k = json.loads(r.text)
     for i in range(count):
     	text = k[i]['text']
     	if k[i]['entities']['urls']:
