@@ -14,7 +14,9 @@ api_key = 'GsoVsAmVFvxGehP0kN2s6fs3DsoNfpAR19bdcTuk0F2PCpGswf'
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('base.html')
+    blogs, tumblr_dates, titles = tumblr('eskitech',1,api_key)
+    tweets, twitter_dates = twitter('EskiTech',1)
+    return render_template('base.html',blogs=blogs,titles=titles, tumblr_dates=tumblr_dates, tweets=tweets,twitter_dates=twitter_dates)
 
 
 

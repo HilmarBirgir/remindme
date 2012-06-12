@@ -37,17 +37,22 @@
       </div>
       <div class="twelve columns content">
         <div class="bubble" id="about">
-          <h1>ABOUT</H1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas hendrerit velit, id faucibus lacus venenatis et. Donec egestas, diam eget tristique accumsan, orci leo viverra elit, ut ultrices nunc lectus sodales nulla. Fusce dictum venenatis tellus, nec vulputate dolor fringilla in. Ut imperdiet sem et neque tempus quis condimentum nunc facilisis. Donec tincidunt ullamcorper arcu, non mattis purus semper vitae. Sed sagittis, nisi dignissim porttitor gravida, nibh lorem gravida elit, in convallis purus elit ac ipsum. In elementum congue metus, at tristique elit venenatis eget. Sed ultricies congue mi ut accumsan. Cras sodales, ligula ac cursus euismod, nibh turpis porta nulla, ac tempus mi dolor sed nulla. Maecenas condimentum tristique vestibulum. Pellentesque pellentesque odio molestie est eleifend faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras nibh magna, lacinia sed scelerisque et, pharetra ac enim. Praesent mi arcu, vulputate eget varius sed, tempus vel odio. Aenean sit amet diam rutrum urna lacinia egestas.</p>
-
-          <p>Nulla et neque arcu, sed rutrum ipsum. Duis neque nulla, rhoncus vitae tempor sit amet, dapibus vitae lectus. Vivamus ullamcorper nibh eget nisl posuere fermentum. Nunc porta, mauris at bibendum congue, enim diam rhoncus metus, et consectetur arcu elit sed massa. Maecenas blandit bibendum dignissim. Nam luctus imperdiet erat non tempus. Praesent pretium sem non justo gravida pretium. Curabitur non lectus ipsum.</p>
+            <h1>Um Fyrirtækið</H1>
+            <p>Tilgangur lyfja er að bæta heilsu þeirra sem þau taka. Þau bæta lífsgæði fólks og geta í mörgum tilfellum bjargað mannslífum.</p>
+            <p>Til að lyfjagjöf skili tilætluðum árangri þarf inntaka lyfjanna að vera samkvæmt fyrirmælum læknis.</p>
+            <p>Því miður er staðreyndin sú að rúmur helmingur fólks tekur lyfin sín á rangan hátt. Þetta á ekki bara við um Ísland heldur er um alþjóðlegt heilbrigðisvandamál að ræða. Afleiðingar þessa geta verið alvarlegar og kostnaðarsamar. </p>
+            <p>Talið er að aukalegur kostnaður íslenska heilbrigðiskerfisins vegna þessa sé um 2,5 milljarðar íslenskra króna á ári.</p>
+            <p>Í dag er vandinn að einhverju leyti leystur með vélrænni lyfjaskömmtun í skammtapokarúllur. Það leysir þó engan veginn vandamálið að fullu.</p>
+            <p>Við erum að þróa RemindMe, sjálfvirkan lyfjaskammtara utan um pokarúllurnar. Með skammtaranum getum við aukið meðferðarheldni lyfjagjafa og þar með, lífsgæði fólks og sparað heilmikla fjármuni í heilbrigðiskerfinu.</p>
+            <p>Hugmyndin byrjaði sem lítið skólaverkefni í Háskóla Íslands en vatt upp á sig þegar hópurinn skráði hana í Gulleggið 2012, nýsköpunarkeppni Innovit og bar þar sigur úr býtum. Í framhaldinu komst hópurinn inn í Startup Reykjavík sem er vettvangur fyrir sprotafyrirtæki til að koma sér á framfæri sumarið 2012. Startup Reykjavík er samstarfsverkefni Innovit, Klak og Arionbanka og er hluti af The Global Accelerator Network.</p>
           <img class="right_about" src="{{ url_for('.static', filename="images/right.png") }}">
         </div>
         <div class="bubble" id="newsfeed">
-          <h1>Newsfeed</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas hendrerit velit, id faucibus lacus venenatis et. Donec egestas, diam eget tristique accumsan, orci leo viverra elit, ut ultrices nunc lectus sodales nulla. Fusce dictum venenatis tellus, nec vulputate dolor fringilla in. Ut imperdiet sem et neque tempus quis condimentum nunc facilisis. Donec tincidunt ullamcorper arcu, non mattis purus semper vitae. Sed sagittis, nisi dignissim porttitor gravida, nibh lorem gravida elit, in convallis purus elit ac ipsum. In elementum congue metus, at tristique elit venenatis eget. Sed ultricies congue mi ut accumsan. Cras sodales, ligula ac cursus euismod, nibh turpis porta nulla, ac tempus mi dolor sed nulla. Maecenas condimentum tristique vestibulum. Pellentesque pellentesque odio molestie est eleifend faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras nibh magna, lacinia sed scelerisque et, pharetra ac enim. Praesent mi arcu, vulputate eget varius sed, tempus vel odio. Aenean sit amet diam rutrum urna lacinia egestas.</p>
-
-          <p>Nulla et neque arcu, sed rutrum ipsum. Duis neque nulla, rhoncus vitae tempor sit amet, dapibus vitae lectus. Vivamus ullamcorper nibh eget nisl posuere fermentum. Nunc porta, mauris at bibendum congue, enim diam rhoncus metus, et consectetur arcu elit sed massa. Maecenas blandit bibendum dignissim. Nam luctus imperdiet erat non tempus. Praesent pretium sem non justo gravida pretium. Curabitur non lectus ipsum.</p>
+          {% for i in range(1) %}
+            <h2>{{titles[i]}}</h2>
+            <h3>{{tumblr_dates[i]}}</h3>
+            <p>{{blogs[i]}}</p>
+          {% endfor %}
           <img class="left" src="{{ url_for('.static', filename="images/left.png") }}">
           <img class="right" src="{{ url_for('.static', filename="images/right.png") }}">
         </div>
@@ -61,11 +66,10 @@
       </div>
       <div class="twelve columns footer">
         <div class="six columns alpha" id="twitter">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas hendrerit velit, id faucibus lacus venenatis et. Donec egestas #REMINDME</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas hendrerit velit, id faucibus lacus venenatis et. Donec egestas #REMINDME</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas hendrerit velit, id faucibus lacus venenatis et. Donec egestas #REMINDME</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas hendrerit velit, id faucibus lacus venenatis et. Donec egestas #REMINDME</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas hendrerit velit, id faucibus lacus venenatis et. Donec egestas #REMINDME</p>
+          {% for i in range(1) %}
+            <p>{{tweets[i]}}</p>
+            <p>{{twitter_dates[i]}}</p>
+          {% endfor %}
         </div>
         <div class="six columns omega" id="facebook">
           <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fplatform&amp;width=460&amp;height=590&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=true&amp;appId=358299280898730" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:460px; height:590px;" allowTransparency="true"></iframe>
