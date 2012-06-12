@@ -238,6 +238,19 @@ body {
   top: 40%;
   right: -100px;
 }
+.content .bubble .starfsmadur {
+  height: 200px;
+  width: 440px;
+  display: inline-block;
+}
+.content .bubble .starfsmadur .texti {
+  width: 200px;
+  float: right;
+}
+.content .bubble .starfsmadur .mynd {
+  width: 200px;
+  float: left;
+}
 .content #about {
   display: none;
 }
