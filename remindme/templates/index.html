@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="bubble" id="about">
+      <h1>Um Fyrirtækið</H1>
+      <p>Tilgangur lyfja er að bæta heilsu þeirra sem þau taka. Þau bæta lífsgæði fólks og geta í mörgum tilfellum bjargað mannslífum.</p>
+      <p>Til að lyfjagjöf skili tilætluðum árangri þarf inntaka lyfjanna að vera samkvæmt fyrirmælum læknis.</p>
+      <p>Því miður er staðreyndin sú að rúmur helmingur fólks tekur lyfin sín á rangan hátt. Þetta á ekki bara við um Ísland heldur er um alþjóðlegt heilbrigðisvandamál að ræða. Afleiðingar þessa geta verið alvarlegar og kostnaðarsamar. </p>
+      <p>Talið er að aukalegur kostnaður íslenska heilbrigðiskerfisins vegna þessa sé um 2,5 milljarðar íslenskra króna á ári.</p>
+      <p>Í dag er vandinn að einhverju leyti leystur með vélrænni lyfjaskömmtun í skammtapokarúllur. Það leysir þó engan veginn vandamálið að fullu.</p>
+      <p>Við erum að þróa RemindMe, sjálfvirkan lyfjaskammtara utan um pokarúllurnar. Með skammtaranum getum við aukið meðferðarheldni lyfjagjafa og þar með, lífsgæði fólks og sparað heilmikla fjármuni í heilbrigðiskerfinu.</p>
+      <p>Hugmyndin byrjaði sem lítið skólaverkefni í Háskóla Íslands en vatt upp á sig þegar hópurinn skráði hana í Gulleggið 2012, nýsköpunarkeppni Innovit og bar þar sigur úr býtum. Í framhaldinu komst hópurinn inn í Startup Reykjavík sem er vettvangur fyrir sprotafyrirtæki til að koma sér á framfæri sumarið 2012. Startup Reykjavík er samstarfsverkefni Innovit, Klak og Arionbanka og er hluti af The Global Accelerator Network.</p>
+    <span class="right_about" id="eskiright">EskiTech</span>
+  </div>
+  <div class="bubble" id="newsfeed">
+    {% for i in range(1) %}
+      <h1>{{titles[i]}}</h1>
+      <h3>{{tumblr_dates[i]}}</h3>
+      <p>{{blogs[i] | safe}}</p>
+    {% endfor %}
+    <a href="">Fleiri Færslur</a>
+    <span class="left" id="abouttext">Um fyrirtækið</span>
+    <span class="right" id="stafftext">Starfsmenn</span>
+  </div>
+  <div class="bubble" id="staff">
+    <div class="starfsmadur">
+      <div class="mynd">
+        <img src="{{ url_for('.static', filename="images/ingunn.png") }}">
+      </div>
+      <div class="texti">
+        <p>Ingunn Guðbrandsdóttir<br>
+        Framkvæmdastjóri/CEO<br>
+        BSc í iðnaðaðarverkfræði<br>
+        email: <a href="mailto:ingunn@eskitech.is">ingunn@eskitech.is</a>
+        sími: +354-6151346</p>
+      </div>
+    </div>
+    <div class="starfsmadur">
+      <div class="mynd">
+        <img src="{{ url_for('.static', filename="images/hilla.png") }}">
+      </div>
+      <div class="texti">
+        <p>Hildigunnur Björgúlfsdóttir<br>
+          Project Manager<br>
+          BSc í iðnaðaðarverkfræði<br>
+          email: <a href="mailto:hildigunnur@eskitech.is">hildigunnur@eskitech.is</a>
+          sími: +354-8239663</p>
+      </div>
+    </div>
+    <div class="starfsmadur">
+      <div class="mynd">
+        <img src="{{ url_for('.static', filename="images/vaka_valsdottir2.png") }}">
+      </div>
+      <div class="texti">
+        <p>Vaka Valsdóttir<br>
+          Project Manager<br>
+          BSc í iðnaðaðarverkfræði<br>
+          email: <a href="mailto:vaka@eskitech.is">vaka@eskitech.is</a><br>
+          sími: +354-8488122</p>
+      </div>
+    </div>
+    <div class="starfsmadur">
+      <div class="mynd">
+        <img src="{{ url_for('.static', filename="images/sveinn.png") }}">
+      </div>
+      <div class="texti">
+        <p>Sveinn B. Magnússon<br>
+          Project Manager<br>
+          BSc í iðnaðaðarverkfræði<br>
+          email: <a href="mailto:sveinn@eskitech.is">sveinn@eskitech.is</a><br>
+          sími: +354-6614583</p>
+      </div>
+    </div>
+    <div class="starfsmadur">
+      <div class="mynd">
+        <img src="{{ url_for('.static', filename="images/oli.png") }}">
+      </div>
+      <div class="texti">
+        <p>Ólafur Helgi Guðmundsson<br>
+          Project Manager<br>
+          BSc í iðnaðaðarverkfræði<br>
+          email: <a href="mailto:oli@eskitech.is">oli@eskitech.is</a><br>
+          sími: +354-6991390</p>
+      </div>
+    </div>
+    <div class="starfsmadur">
+      <div class="mynd">
+        <img src="{{ url_for('.static', filename="images/hjortur.png") }}">
+      </div>
+      <div class="texti">
+        <p>Hjörtur Geir Björnsson<br>
+          Project Manager<br>
+          BSc í iðnaðaðarverkfræði<br>
+          email: <a href="mailto:oli@eskitech.is">hjortur@eskitech.is</a><br>
+          sími: +354-6991390</p>
+      </div>
+    </div>
+    <span class="left_staff" id="eskileft">EskiTech</span>
+  </div>
+{% endblock %}

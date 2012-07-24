@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="bubble">
+    {% for i in range(2) %}
+      <h1>{{titles[i]}}</h1>
+      <h3>{{tumblr_dates[i]}}</h3>
+      <p>{{blogs[i]|safe}}</p>
+      <hr>
+    {% endfor %}
+  </div>
+
+
+{% endblock %}
