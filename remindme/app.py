@@ -2,7 +2,7 @@
 
 import os
 
-from flask import Flask, request, g
+from flask import Flask
 
 app = Flask(__name__)
 app.config.from_object('remindme.config.%s' % os.environ.get('REMINDME_CONFIG', 'production'))
@@ -10,4 +10,7 @@ app.config.from_object('remindme.config.%s' % os.environ.get('REMINDME_CONFIG', 
 from remindme.views import *
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=app.config.get('PORT', 5000), debug=True)
+    # Bind to PORT if defined, otherwise default to 5000.
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+
