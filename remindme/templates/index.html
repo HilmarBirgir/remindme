@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+  <div class="tabs">
+    <a class="about" href="#"><div class="tab">Um fyrirtækið</div>
+    <div class="tab"><a class="newsfeed" href="#">Fréttaveita</a></div>
+    <div class="tab"><a class="staff" href="#">Starfsmenn</a></div>
+  </div>
+
   <div class="bubble hide" id="about">
       <h1>Um Fyrirtækið</H1>
       <p>Tilgangur lyfja er að bæta heilsu þeirra sem þau taka. Þau bæta lífsgæði fólks og geta í mörgum tilfellum bjargað mannslífum.</p>
@@ -17,7 +23,7 @@
       <h3>{{tumblr_dates[i]}}</h3>
       <p>{{blogs[i] | safe}}</p>
     {% endfor %}
-    <a id="blog" href="/blogs">Fleiri Færslur</a>
+    <a id="blog" href="/blog">Fleiri Færslur</a>
   </div>
   <div class="bubble hide" id="staff">
     <div class="starfsmadur">
