@@ -116,46 +116,27 @@ window.require.define({"application": function(exports, require, module) {
       BubbleView.prototype.el = ".container";
 
       BubbleView.prototype.events = {
-        "click .left": "left",
-        "click .right": "right",
-        "click .right_about": "right_about",
-        "click .left_staff": "left_staff"
+        "click .about": "about",
+        "click .newsfeed": "newsfeed",
+        "click .staff": "staff"
       };
 
-      BubbleView.prototype.left = function(e) {
-        ($(this.el)).hide("slide", {
-          direction: 'right'
-        }, 1);
-        return $('#about').show("slide", {
-          direction: 'left'
-        }, 1000);
+      BubbleView.prototype.about = function(e) {
+        $('#about').removeClass('hide');
+        $('#staff').addClass('hide');
+        return $('#newsfeed').addClass('hide');
       };
 
-      BubbleView.prototype.right = function(e) {
-        ($(this.el)).hide("slide", {
-          direction: 'right'
-        }, 1);
-        return $('#staff').show("slide", {
-          direction: 'right'
-        }, 1000);
+      BubbleView.prototype.newsfeed = function(e) {
+        $('#newsfeed').removeClass('hide');
+        $('#about').addClass('hide');
+        return $('#staff').addClass('hide');
       };
 
-      BubbleView.prototype.right_about = function(e) {
-        ($(this.el)).hide("slide", {
-          direction: 'left'
-        }, 1);
-        return $('#newsfeed').show("slide", {
-          direction: 'right'
-        }, 1000);
-      };
-
-      BubbleView.prototype.left_staff = function(e) {
-        ($(this.el)).hide("slide", {
-          direction: 'right'
-        }, 1);
-        return $('#newsfeed').show("slide", {
-          direction: 'left'
-        }, 1000);
+      BubbleView.prototype.staff = function(e) {
+        $('#staff').removeClass('hide');
+        $('#about').addClass('hide');
+        return $('#newsfeed').addClass('hide');
       };
 
       return BubbleView;
@@ -173,17 +154,7 @@ window.require.define({"initialize": function(exports, require, module) {
     application = require('application');
 
     $(function() {
-      window.app.collection = new window.Bubbles;
-      return ($(".content")).find('.bubble').each(function() {
-        var model, view;
-        model = new window.Bubble;
-        view = new window.BubbleView({
-          el: this,
-          model: model
-        });
-        model.view = view;
-        return window.app.collection.add(model);
-      });
+      return new BubbleView;
     });
 
   }).call(this);

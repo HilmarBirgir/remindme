@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="bubble" id="about">
+  <div class="bubble hide" id="about">
       <h1>Um Fyrirtækið</H1>
       <p>Tilgangur lyfja er að bæta heilsu þeirra sem þau taka. Þau bæta lífsgæði fólks og geta í mörgum tilfellum bjargað mannslífum.</p>
       <p>Til að lyfjagjöf skili tilætluðum árangri þarf inntaka lyfjanna að vera samkvæmt fyrirmælum læknis.</p>
@@ -10,7 +10,6 @@
       <p>Í dag er vandinn að einhverju leyti leystur með vélrænni lyfjaskömmtun í skammtapokarúllur. Það leysir þó engan veginn vandamálið að fullu.</p>
       <p>Við erum að þróa RemindMe, sjálfvirkan lyfjaskammtara utan um pokarúllurnar. Með skammtaranum getum við aukið meðferðarheldni lyfjagjafa og þar með, lífsgæði fólks og sparað heilmikla fjármuni í heilbrigðiskerfinu.</p>
       <p>Hugmyndin byrjaði sem lítið skólaverkefni í Háskóla Íslands en vatt upp á sig þegar hópurinn skráði hana í Gulleggið 2012, nýsköpunarkeppni Innovit og bar þar sigur úr býtum. Í framhaldinu komst hópurinn inn í Startup Reykjavík sem er vettvangur fyrir sprotafyrirtæki til að koma sér á framfæri sumarið 2012. Startup Reykjavík er samstarfsverkefni Innovit, Klak og Arionbanka og er hluti af The Global Accelerator Network.</p>
-    <span class="right_about" id="eskiright">EskiTech</span>
   </div>
   <div class="bubble" id="newsfeed">
     {% for i in range(1) %}
@@ -18,11 +17,9 @@
       <h3>{{tumblr_dates[i]}}</h3>
       <p>{{blogs[i] | safe}}</p>
     {% endfor %}
-    <a href="">Fleiri Færslur</a>
-    <span class="left" id="abouttext">Um fyrirtækið</span>
-    <span class="right" id="stafftext">Starfsmenn</span>
+    <a id="blog" href="/blogs">Fleiri Færslur</a>
   </div>
-  <div class="bubble" id="staff">
+  <div class="bubble hide" id="staff">
     <div class="starfsmadur">
       <div class="mynd">
         <img src="{{ url_for('.static', filename="images/ingunn.png") }}">
@@ -95,6 +92,5 @@
           sími: +354-6991390</p>
       </div>
     </div>
-    <span class="left_staff" id="eskileft">EskiTech</span>
   </div>
 {% endblock %}

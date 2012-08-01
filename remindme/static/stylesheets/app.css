@@ -227,6 +227,31 @@ a:visited {
 .header .links .active {
   text-decoration: underline;
 }
+.hide {
+  display: none;
+}
+.tabs {
+  padding-left: 60px;
+  margin-top: 20px;
+  margin-bottom: -4px;
+}
+.tabs .tab {
+  width: 270px;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background: #fff;
+  border: 2px solid #000;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.tabs .tab:hover {
+  background: #1a5481;
+}
 .content {
   margin-bottom: 30px;
 }
@@ -237,72 +262,11 @@ a:visited {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
-  margin-top: 20px;
   padding: 20px;
 }
-.content .bubble #abouttext {
-  background-image: url("../images/left.png");
-  position: absolute;
-  top: 40%;
-  left: -90px;
-  font-size: 10px;
-  height: 104px;
-  padding-top: 45px;
-  padding-left: 9px;
-  padding-right: 5px;
-}
-.content .bubble #stafftext {
-  background-image: url("../images/right.png");
-  position: absolute;
-  top: 40%;
-  right: -90px;
-  font-size: 10px;
-  height: 104px;
-  padding-top: 45px;
-  padding-left: 9px;
-  padding-right: 11px;
-}
-.content .bubble #eskiright {
-  background-image: url("../images/right.png");
-  position: absolute;
-  top: 40%;
-  right: -90px;
-  font-size: 10px;
-  height: 104px;
-  padding-top: 45px;
-  padding-left: 15px;
-  padding-right: 16px;
-}
-.content .bubble #eskileft {
-  background-image: url("../images/left.png");
-  position: absolute;
-  top: 40%;
-  left: -90px;
-  font-size: 10px;
-  height: 104px;
-  padding-top: 45px;
-  padding-left: 16px;
-  padding-right: 15px;
-}
-.content .bubble .left {
-  position: absolute;
-  top: 40%;
-  left: -100px;
-}
-.content .bubble .left_staff {
-  position: absolute;
-  top: 40%;
-  left: -100px;
-}
-.content .bubble .right {
-  position: absolute;
-  top: 40%;
-  right: -100px;
-}
-.content .bubble .right_about {
-  position: absolute;
-  top: 40%;
-  right: -100px;
+.content .bubble #blog {
+  color: #1a5481;
+  text-decoration: underline;
 }
 .content .bubble .starfsmadur {
   height: 280px;
@@ -316,12 +280,6 @@ a:visited {
 .content .bubble .starfsmadur .mynd {
   width: 200px;
   float: left;
-}
-.content #about {
-  display: none;
-}
-.content #staff {
-  display: none;
 }
 .footer {
   margin-bottom: 100px;

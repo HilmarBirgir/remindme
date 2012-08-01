@@ -37,9 +37,12 @@
           <a href="/"><img src="{{ url_for('.static', filename="images/logo.png") }}"></a>
         </div>
         <div class="two columns omega links">
-          <a class="active" href="">IS</a>
-          <a href="">EN</a>
         </div>
+      </div>
+      <div class="twelve columns tabs">
+        <a class="about" href="#"><div class="tab">Um fyrirtækið</div>
+        <div class="tab"><a class="newsfeed" href="#">Fréttaveita</a></div>
+        <div class="tab"><a class="staff" href="#">Starfsmenn</a></div>
       </div>
       <div class="twelve columns content">
         {% block content %}{% endblock content %}
