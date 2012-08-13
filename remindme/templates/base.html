@@ -32,8 +32,12 @@
   </head>
   <body>
     <div class="container">
+
       <div class="twelve columns header">
-        <h1>Remind me</h1>
+        <!--<h1>Remind me</h1>-->
+        <div class="mynd2">
+          <img src="{{ url_for('.static', filename="images/eskitech.jpg") }}">
+        </div>
       </div>
       <div class="twelve columns content">
         <div class="bubble" id="about">
@@ -117,6 +121,18 @@
                 sími: +354-6991390</p>
             </div>
           </div>
+          <div class="starfsmadur">
+            <div class="mynd">
+              <img src="{{ url_for('.static', filename="images/loverboy.jpg") }}">
+            </div>
+            <div class="texti">
+              <p>Hjörtur Geir Björnsson<br>
+                Project Manager<br>
+                BSc í iðnaðaðarverkfræði<br>
+                email: <a href="mailto:hjortur@eskitech.is">hjortur@eskitech.is</a><br>
+                sími: +354-símalíf</p>
+            </div>
+          </div>
           <img class="left_staff" src="{{ url_for('.static', filename="images/left.png") }}">
         </div>
       </div>
@@ -127,10 +143,27 @@
             <p>{{tweets[i]}} </p>
             <br>
             <p class="date">{{twitter_dates[i]}}</p>
+            <br>
+            <br>
+            <img src="{{ url_for('.static', filename="images/twitter.jpg") }}">
+            <p>{{tweets[i+1]}} </p>
+            <br>
+            <br>
+            <p class="date">{{twitter_dates[i+1]}}</p>
+            <br>
+            <br>
+            <img src="{{ url_for('.static', filename="images/twitter.jpg") }}">
+            <p>{{tweets[i+2]}} </p>
+            <br>
+            <p class="date">{{twitter_dates[i+1]}}</p>
           {% endfor %}
         </div>
         <div class="six columns omega" id="facebook">
           <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fplatform&amp;width=460&amp;height=590&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=true&amp;appId=358299280898730" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:460px; height:590px;" allowTransparency="true"></iframe>
+        </div>
+        <div>
+          <a href="https://twitter.com/EskiTech" class="twitter-follow-button" data-show-count="false">Follow @EskiTech</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
     </div>
   </body>
