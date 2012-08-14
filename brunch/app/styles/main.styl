@@ -9,50 +9,74 @@
 
 body
   font-family Arial, Helvetica, sans-serif
+  background #1a5481
+
+a
+  color black
+  text-decoration none
+
+a:hover
+  color #1a5481
+
+a:visited
+  color black
+
 
 .header
-  height 220px
-  background #2d4e99
-  border 4px solid black
+  height 160px
+  border 2px solid black
   border-radius 15px
   margin-top 20px
+  padding 20px
+  background white
+  margin-bottom 20px
 
-  h1
-    margin-left 20px
-    font-size 50px
+  .links
+    a
+      float right
+      margin-left 10px
+
+    .active
+      text-decoration underline
+
+    margin-top 80px
+
+.hide
+  display none
+
+.tabs
+  padding-left 60px
+  margin-bottom -4px
+
+  .tab
+    width 270px
+    display inline-block
+    padding-top 10px
+    padding-bottom 10px
+    text-align center
+    background white
+    border 2px solid black
+    transition all 1s ease
+
+  .tab:hover
+    background #1a5481
 
 .content
+  margin-bottom 30px
 
   .bubble
+    background white
     position relative
-    border 4px solid black
+    border 2px solid black
     border-radius 15px
-    margin-top 20px
     padding 20px
 
-
-    .left
-      position absolute
-      top 40%
-      left -100px
-
-    .left_staff
-      position absolute
-      top 40%
-      left -100px
-    
-    .right
-      position absolute
-      top 40%
-      right -100px
-
-    .right_about
-      position absolute
-      top 40%
-      right -100px
+    #blog
+      color #1a5481
+      text-decoration underline
 
     .starfsmadur
-      height 200px
+      height 280px
       width 440px
       display inline-block
 
@@ -64,13 +88,6 @@ body
         width 200px
         float left
 
-
-  #about
-    display none
-
-  #staff
-    display none
-
 .footer
   margin-bottom 100px
   margin-top 20px
@@ -80,7 +97,7 @@ body
     background #2d4e99
     border-radius 15px
     padding 20px
-    height 590px
+    height 350px
     border 4px solid black
 
     img
